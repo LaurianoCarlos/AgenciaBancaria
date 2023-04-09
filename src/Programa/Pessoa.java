@@ -13,7 +13,7 @@ public class Pessoa {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.email = email;
-		this.contadorDePessoas += 1;
+		contadorDePessoas += 1;
 	}
 	public String getNome() {
 		return nome;

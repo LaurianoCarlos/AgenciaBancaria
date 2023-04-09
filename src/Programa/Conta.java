@@ -11,7 +11,7 @@ public class Conta {
 	private double saldo = 0.0;
 	public Conta(Pessoa pessoa) {
 		this.pessoa = pessoa;
-		this.contadorDeContas = numeroConta;
+		contadorDeContas = numeroConta;
 		contadorDeContas += 1;
 	}
 	public int getNumeroConta() {
@@ -57,7 +57,7 @@ public class Conta {
 			System.out.println("Não foi possivel realizar a operação");
 		}
 	}
-	public void depositar(Conta contaParaDeposito, double valor) {
+	public void transferir(Conta contaParaDeposito, double valor) {
 		if(valor > 0 && getSaldo() >= valor) {
 			setSaldo(getSaldo() - valor);
 			
