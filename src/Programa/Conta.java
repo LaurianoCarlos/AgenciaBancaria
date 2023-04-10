@@ -4,15 +4,17 @@ import Utilitarios.Utils;
 
 public class Conta {
 
-	private static int contadorDeContas = 1;
+	private static int contadorDeContas = 0;
 	
 	private int numeroConta;
 	private Pessoa pessoa;
 	private double saldo = 0.0;
+	
 	public Conta(Pessoa pessoa) {
 		this.pessoa = pessoa;
-		contadorDeContas = numeroConta;
-		contadorDeContas += 1;
+		setNumeroConta(Pessoa.getContadorDePessoas());
+		this.numeroConta = getNumeroConta() + 1000;
+		
 	}
 	public int getNumeroConta() {
 		return numeroConta;
@@ -31,6 +33,12 @@ public class Conta {
 	}
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
+	}
+	public static int getContadorDeContas() {
+		return contadorDeContas;
+	}
+	public static void setContadorDeContas(int contadorDeContas) {
+		Conta.contadorDeContas = contadorDeContas;
 	}
 	
 	public String toString() {

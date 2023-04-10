@@ -45,7 +45,7 @@ class AgenciaBancaria {
 		case 5:
 			listarContas();
 			break;
-		case 6:
+		case 0:
 			System.out.println("Obrigado por usar o BANCO BGS");
 			System.exit(0);
 		default:
@@ -102,7 +102,7 @@ class AgenciaBancaria {
 			double valorDeposito = input.nextDouble();
 
 			conta.depositar(valorDeposito);
-			System.out.println("Deposito realizado com sucesso!");
+		
 		} else {
 			System.out.println("Conta não encontrada");
 		}
@@ -121,7 +121,7 @@ class AgenciaBancaria {
 			double valorSaque = input.nextDouble();
 
 			conta.sacar(valorSaque);
-			System.out.println("Saque realizado com sucesso!");
+		
 		} else {
 			System.out.println("Conta não encontrada");
 		}
@@ -145,7 +145,7 @@ class AgenciaBancaria {
 				System.out.println("Insira valor da transferencia:");
 				double valorTransferencia = input.nextDouble();
 
-				contaRemetente.transferir(contaRemetente, valorTransferencia);
+				contaRemetente.transferir(contaDestinatario, valorTransferencia);
 
 			}
 		}

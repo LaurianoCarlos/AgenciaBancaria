@@ -2,7 +2,7 @@ package Programa;
 
 public class Pessoa {
 
-	private static int contadorDePessoas = 1;
+	private static int contadorDePessoas = 0;
 	
 	private String nome;
 	private String cpf;
@@ -13,7 +13,7 @@ public class Pessoa {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.email = email;
-		contadorDePessoas += 1;
+		setContadorDePessoas(getContadorDePessoas() + 1);
 	}
 	public String getNome() {
 		return nome;
@@ -37,5 +37,11 @@ public class Pessoa {
 		return "Nome: "+ this.getNome() 
 		       + "Cpf: " + this.getCpf()
 		       + "Email: " + this.getEmail();
+	}
+	public static int getContadorDePessoas() {
+		return contadorDePessoas;
+	}
+	public static void setContadorDePessoas(int contadorDePessoas) {
+		Pessoa.contadorDePessoas = contadorDePessoas;
 	}
 }
