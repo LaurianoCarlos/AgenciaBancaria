@@ -5,7 +5,6 @@ import Utilitarios.Utils;
 public class Conta {
 
 	private static int contadorDeContas = 0;
-	
 	private int numeroConta;
 	private Pessoa pessoa;
 	private double saldo = 0.0;
@@ -14,29 +13,36 @@ public class Conta {
 		this.pessoa = pessoa;
 		setNumeroConta(Pessoa.getContadorDePessoas());
 		this.numeroConta = getNumeroConta() + 1000;
-		
 	}
+
 	public int getNumeroConta() {
 		return numeroConta;
 	}
+
 	public void setNumeroConta(int numeroConta) {
 		this.numeroConta = numeroConta;
 	}
+
 	public Pessoa getPessoa() {
 		return pessoa;
 	}
+
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
 	}
+
 	public double getSaldo() {
 		return saldo;
 	}
+
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+
 	public static int getContadorDeContas() {
 		return contadorDeContas;
 	}
+
 	public static void setContadorDeContas(int contadorDeContas) {
 		Conta.contadorDeContas = contadorDeContas;
 	}
@@ -57,6 +63,7 @@ public class Conta {
 			System.out.println("Não foi possivel realizar a operação");
 		}
 	}
+	
 	public void sacar(double valor) {
 		if(valor > 0 && getSaldo() >= valor) {
 			setSaldo(getSaldo() - valor);
@@ -65,6 +72,7 @@ public class Conta {
 			System.out.println("Não foi possivel realizar a operação");
 		}
 	}
+
 	public void transferir(Conta contaParaDeposito, double valor) {
 		if(valor > 0 && getSaldo() >= valor) {
 			setSaldo(getSaldo() - valor);

@@ -52,8 +52,6 @@ class AgenciaBancaria {
 			System.out.println("Opção Inválida");
 			operacoes();
 			break;
-			
-			
 		}
 	}
 
@@ -61,10 +59,8 @@ class AgenciaBancaria {
 		System.out.println("Insira seu nome: ");
 		input.nextLine();
 		String nome = input.nextLine();
-
 		System.out.println("Insira seu cpf: ");
 		String cpf = input.nextLine();
-
 		System.out.println("Insira seu email: ");
 		String email = input.nextLine();
 
@@ -106,7 +102,6 @@ class AgenciaBancaria {
 		} else {
 			System.out.println("Conta não encontrada");
 		}
-		
 		operacoes();
 	}
 
@@ -134,19 +129,16 @@ class AgenciaBancaria {
 		int numeroContaRemetente = input.nextInt();
 
 		Conta contaRemetente = encontrarConta(numeroContaRemetente);
-
 		if (contaRemetente != null) {
 			System.out.println("Inisra numero da conta do destinatario: ");
 			int numeroContaDestinatario = input.nextInt();
 
 			Conta contaDestinatario = encontrarConta(numeroContaDestinatario);
-
 			if (contaDestinatario != null) {
 				System.out.println("Insira valor da transferencia:");
 				double valorTransferencia = input.nextDouble();
 
 				contaRemetente.transferir(contaDestinatario, valorTransferencia);
-
 			}
 		}
 		operacoes();
